@@ -24,7 +24,7 @@ asyncTest("Successful request - send method", function() {
 	} else {
 		new tinymce.util.JSONRequest({}).send({
 			type : 'GET',
-			url : 'json_rpc_ok.js',
+			url : 'json_rpc_ok.json',
 			success: function(data) {
 				equal(data, 'Hello JSON-RPC');
 				start();
@@ -43,7 +43,7 @@ asyncTest("Successful request - sendRPC static method", function() {
 	} else {
 		tinymce.util.JSONRequest.sendRPC({
 			type : 'GET',
-			url : 'json_rpc_ok.js',
+			url : 'json_rpc_ok.json',
 			success: function(data) {
 				equal(data, 'Hello JSON-RPC');
 				start();

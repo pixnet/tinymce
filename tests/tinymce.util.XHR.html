@@ -25,11 +25,11 @@ asyncTest("Successful request", function() {
 		start();
 	} else {
 		tinymce.util.XHR.send({
-			url : 'json_rpc_ok.js',
+			url : 'json_rpc_ok.json',
 			success: function(data, xhr, input) {
 				equal(tinymce.trim(data), '{"result": "Hello JSON-RPC", "error": null, "id": 1}');
 				ok(!!xhr.status);
-				equal(input.url, 'json_rpc_ok.js');
+				equal(input.url, 'json_rpc_ok.json');
 				start();
 			}
 		});
